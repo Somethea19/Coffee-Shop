@@ -5,7 +5,7 @@ from .models import Coffee
 # Create your views here.
 def home(request):
     coffee = Coffee.objects.all()
-    return render(request,'home.html',{'coffee': coffee})
+    return render(request,'index.html',{'coffee': coffee})
 def about(request):
     return render(request,'about.html')
 def category(request):
