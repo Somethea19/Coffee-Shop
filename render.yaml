@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: coffee-shop
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn yourprojectname.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: coffeeshop.settings
